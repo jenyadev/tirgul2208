@@ -32,5 +32,8 @@ output:
 
 2. attach a bash into the running container you created above
 
-3.now find the python file which contains the flask code and cat it(hint: use docker
+3.write a DockerFile ubuntu base that runs apache web server and sayes:Hello From Docker
+and expose it on port 80.
+
+4.now find the python file which contains the flask code and cat it(hint: use docker
 ps-no trunc to see the command in the container line
