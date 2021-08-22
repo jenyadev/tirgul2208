@@ -1,0 +1,36 @@
+docker commands:
+docker ps -n 10 [will show the last 10 containers]
+docker stop <container-id> [will stop the container, but not delete it]
+docker start <container-id> [will resume running the container]
+docker kill <container-id> [will force stop the container]
+docker rm <container-name> [remove container]
+docker rm -f <container-name> [remove container]
+docker run ubuntu sleep 10 [will run the ubuntu for 10 seconds then stop]
+docker exec <container-id> cat /etc/hosts [will cat hosts on a RUNNING container]
+docker exec <container-id> df -h
+docker run kodekloud/simple-webapp
+^ctrl+c [will detach, but container is still RUNNING]
+docker run -d kodekloud/simple-webapp [will run in detached mode]
+docker attach <container-id> [will attach to a running container]
+docker run -it centos bash [-i runs interactively]
+$ cat /etc/release ==> CentOS8
+$ exit
+docker exec -it <container-id> bash [will attach a bash into a RUNNING container]
+docker ps –no-trunc [will show the entire data]
+docker run redis
+docker run -p 6377:6379 redis [will map port 6379 in docker to port 6377 in host]
+tags:
+docker run redis:latest [=default]
+docker run redis:4.0 [=will run version 4.0]
+
+home work:
+1.run this image: kodekloud/webapp (it runs on port 5000).
+ map the image portto host port3001
+
+output:
+"welcome"
+
+2. attach a bash into the running container you created above
+
+3.now find the python file which contains the flask code and cat it(hint: use docker
+ps-no trunc to see the command in the container line
